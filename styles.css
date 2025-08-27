@@ -424,7 +424,7 @@ body::before {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -1629,14 +1629,18 @@ body::before {
   }
 
   .progress-section {
-    margin: clamp(1rem, 3vw, 1.5rem) 0;
+    margin: clamp(0.6rem, 2vw, 1rem) 0;
     padding: 1rem;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .stat-card {
+    padding: 0.9rem;
   }
 
   .story-content {
@@ -1689,7 +1693,7 @@ body::before {
   }
 
   .cta-section {
-    margin-top: 1.5rem;
+    margin-top: 0.6rem;
   }
 
   .cta-button {

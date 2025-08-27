@@ -1645,6 +1645,9 @@ body::before {
 
   .story-content {
     padding: 1.2rem 1rem;
+    /* Avoid heavy blur on low-power devices which may cause paint glitches */
+    backdrop-filter: none;
+    background: rgba(15, 15, 35, 0.92);
     line-height: 1.7;
   }
 
@@ -1873,9 +1876,12 @@ body::before {
     font-size: 1.8rem;
   }
 
-  /* On very small screens, simplify the YouTube overlay */
+  /* On very small screens, keep title visible but smaller */
   .yt-topbar {
-    display: none;
+    display: flex;
+  }
+  .yt-title {
+    font-size: 0.95rem;
   }
   .yt-watchbar .yt-label {
     font-size: 0.95rem;

@@ -1,0 +1,33 @@
+{
+  "name": "road-to-100k",
+  "version": "1.0.0",
+  "description": "A modern website to track YouTube channel progress to 100K subscribers",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
+    "build": "echo 'No build process needed - static files ready for deployment'",
+    "deploy": "echo 'Upload index.html, styles.css, script.js to your hosting provider'"
+  },
+  "keywords": [
+    "youtube",
+    "subscriber-tracker",
+    "progress-tracker",
+    "100k-subscribers",
+    "modern-web",
+    "responsive-design"
+  ],
+  "author": "Road to 100K Creator",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/road-to-100k.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/road-to-100k/issues"
+  },
+  "homepage": "https://github.com/yourusername/road-to-100k#readme"
+}

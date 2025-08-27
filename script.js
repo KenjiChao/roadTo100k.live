@@ -351,11 +351,9 @@ const initEventListeners = () => {
   }, observerOptions);
 
   // Observe elements for scroll animations
-  document
-    .querySelectorAll(".progress-section, .story-content")
-    .forEach((el) => {
-      observer.observe(el);
-    });
+  document.querySelectorAll(".progress-section").forEach((el) => {
+    observer.observe(el);
+  });
 };
 
 // Milestone celebrations

@@ -1644,7 +1644,7 @@ body::before {
   }
 
   .story-content {
-    padding: 1.8rem;
+    padding: 1.2rem 1rem;
     line-height: 1.7;
   }
 
@@ -1879,6 +1879,11 @@ body::before {
   }
   .yt-watchbar .yt-label {
     font-size: 0.95rem;
+  }
+
+  /* Make article width more generous on very small screens */
+  .story-content {
+    padding: 1rem 0.8rem;
   }
 }
 

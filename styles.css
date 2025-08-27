@@ -337,7 +337,7 @@ body::before {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding: clamp(30px, 4vh, 50px) 0 clamp(10px, 2vh, 15px);
+  padding: clamp(20px, 3vh, 40px) 0 clamp(8px, 2vh, 12px);
   background: transparent;
   position: relative;
   overflow: visible;
@@ -350,6 +350,7 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-top: 0; /* prevent UA default top margin causing large gaps */
   margin-bottom: 1rem;
   line-height: 1.1;
   filter: drop-shadow(0 4px 20px rgba(78, 205, 196, 0.2));
@@ -1599,7 +1600,7 @@ body::before {
   }
 
   .channel-logo {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem; /* reduce chance of large gap on scroll relayout */
   }
 
   .logo-circle {

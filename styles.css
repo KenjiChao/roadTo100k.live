@@ -1714,6 +1714,28 @@ body::before {
   .footer-subtitle {
     font-size: 0.8rem;
   }
+
+  /* Video preview adjustments */
+  .video-section {
+    margin: 2rem 0;
+  }
+  .video-container {
+    margin: 1rem auto;
+  }
+  .yt-title {
+    font-size: 1rem;
+  }
+  .yt-watchbar {
+    padding: 10px 12px;
+  }
+  .yt-watchbar .yt-label {
+    font-size: 1rem;
+  }
+  .play-button {
+    width: 64px;
+    height: 44px;
+    border-radius: 10px;
+  }
 }
 
 /* Extra responsive adjustments */
@@ -1849,6 +1871,14 @@ body::before {
 
   .stat-number {
     font-size: 1.8rem;
+  }
+
+  /* On very small screens, simplify the YouTube overlay */
+  .yt-topbar {
+    display: none;
+  }
+  .yt-watchbar .yt-label {
+    font-size: 0.95rem;
   }
 }
 

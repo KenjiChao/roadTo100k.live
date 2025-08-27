@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/road-to-100k.git"
+    "url": "git+https://github.com/KenjiChao/roadTo100k.live.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/road-to-100k/issues"
+    "url": "https://github.com/KenjiChao/roadTo100k.live/issues"
   },
-  "homepage": "https://github.com/yourusername/road-to-100k#readme"
+  "homepage": "https://roadTo100k.live"
 }

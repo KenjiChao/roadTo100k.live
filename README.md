@@ -9,7 +9,7 @@ A simple, modern static site to track a YouTube channel’s progress to 100,000 
 
 ## Configure (optional)
 
-Edit `script.js` → `CONFIG`:
+Edit `script.js` → `CONFIG` or use a local `env.js` (recommended for local dev):
 
 ```javascript
 const CONFIG = {
@@ -21,6 +21,14 @@ const CONFIG = {
 ```
 
 If you skip the API key, the site runs in demo mode with simulated data.
+
+### Local env.js (gitignored)
+
+Create `env.js` in project root:
+
+```html
+window.ENV = { YOUTUBE_API_KEY: "YOUR_API_KEY" };
+```
 
 ## Deploy (Vercel)
 

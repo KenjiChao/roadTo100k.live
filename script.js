@@ -1,6 +1,9 @@
 // Configuration - Replace these with your actual values
+// Read runtime env from a local, gitignored env.js if present
+const RUNTIME_ENV =
+  typeof window !== "undefined" && window.ENV ? window.ENV : {};
 const CONFIG = {
-  YOUTUBE_API_KEY: "AIzaSyCsG_IjltKsLThRcGVXzlDk9VPUls7kB-Y", // Get from Google Cloud Console
+  YOUTUBE_API_KEY: RUNTIME_ENV.YOUTUBE_API_KEY || "YOUR_YOUTUBE_API_KEY", // Set via env.js
   CHANNEL_ID: "UCJIPFjZSCWR15_jxBaK2fQQ", // Your YouTube Channel ID
   FEATURED_VIDEO_ID: "jT7XPKHXTwE", // Video to feature on the page
   CHANNEL_NAME: "矽谷輕鬆談", // Will be updated from API

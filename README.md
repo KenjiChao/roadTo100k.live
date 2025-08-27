@@ -33,7 +33,7 @@ window.ENV = { YOUTUBE_API_KEY: "YOUR_API_KEY" };
 ## Deploy (Vercel)
 
 - New Project → Import repo → Framework: Other
-- Build Command: empty
+- Build Command: `npm ci && npm run build` (this generates env.js from your env var)
 - Output Directory: empty (serves from repository root)
 - Or CLI: `vercel --prod --yes`
 

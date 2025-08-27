@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx live-server --port=3000 --open=/index.html",
     "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
-    "build": "echo 'No build process needed - static files ready for deployment'",
+    "build": "node scripts/gen-env.js",
     "deploy": "echo 'Upload index.html, styles.css, script.js to your hosting provider'"
   },
   "keywords": [

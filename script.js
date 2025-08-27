@@ -239,7 +239,12 @@ const getFeaturedVideoTitle = () => {
 // Video functions
 const loadVideoThumbnail = () => {
   const thumbnailUrl = `https://img.youtube.com/vi/${CONFIG.FEATURED_VIDEO_ID}/maxresdefault.jpg`;
-  elements.videoThumbnail.style.backgroundImage = `url(${thumbnailUrl})`;
+  // Preload to avoid layout jank when section comes into view
+  const preload = new Image();
+  preload.src = thumbnailUrl;
+  preload.onload = () => {
+    elements.videoThumbnail.style.backgroundImage = `url(${thumbnailUrl})`;
+  };
 };
 
 const loadFeaturedVideo = () => {
@@ -347,7 +352,7 @@ const initEventListeners = () => {
 
   // Observe elements for scroll animations
   document
-    .querySelectorAll(".progress-section, .story-content, .video-section")
+    .querySelectorAll(".progress-section, .story-content")
     .forEach((el) => {
       observer.observe(el);
     });

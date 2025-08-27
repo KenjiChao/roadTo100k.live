@@ -389,7 +389,7 @@ body::before {
   max-width: 600px;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: clip; /* prevents scroll jank from overflow painting on large images */
 }
 
 .progress-section:hover {
@@ -1379,6 +1379,7 @@ body::before {
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
   transition: var(--transition-smooth);
+  contain: content; /* isolate layout/paint to avoid page reflow blips */
 }
 
 .video-container:hover {
@@ -1398,6 +1399,7 @@ body::before {
   cursor: pointer;
   position: relative;
   transition: var(--transition-smooth);
+  will-change: transform, opacity; /* hint for smoother overlay transitions */
 }
 
 /* Medium-like top bar with channel and title */
@@ -1477,6 +1479,7 @@ body::before {
   /* 重要：不要攔截點擊，讓使用者能操作 iframe（暫停/播放） */
   pointer-events: none;
   transition: var(--transition-smooth);
+  will-change: opacity;
 }
 
 /* 播放中關閉任何灰層 */
